@@ -45,6 +45,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
+      - name: Update Served From Badge
+        run: echo '{"server":"GitHub Pages"}' > public/serverinfo.json
       - name: Build
         run: pnpm run generate
       - name: Setup Pages

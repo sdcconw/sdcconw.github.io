@@ -1,6 +1,7 @@
 <template>
     <footer>
         Copyright © 島根データセンター友の会
+        <ServerInfoBadge />
     </footer>
 </template>
 
