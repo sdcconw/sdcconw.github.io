@@ -1,75 +1,24 @@
-# Nuxt 3 Minimal Starter
+# SDCCONW サイト
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## サイトについて
 
-## Setup
+NuxtJS 3で作られています。
 
-Make sure to install the dependencies:
+## Served from バッジについて
 
-```bash
-# npm
-npm install
+`/serverinfo.json`にアクセスした際の情報を表示します。
 
-# pnpm
-pnpm install
+書式は下記のとおりです。
 
-# yarn
-yarn install
-
-# bun
-bun install
+```json
+{
+    "server": "Cloud"
+}
 ```
 
-## Development Server
+Served fromバッジの初期情報は、`/public/serverinfo.json`に保存されています。
+各サーバへのデプロイ前に変更するか、nginx等でこの値を書き換えてください。
 
-Start the development server on `http://localhost:3000`:
+### Unknown表記の場合
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+キーの指定が間違っているか、リクエストが失敗した場合に表示されます。
